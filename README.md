@@ -16,6 +16,11 @@ SplitApp is a backend REST API built with **Spring Boot** and **PostgreSQL** for
 
 ---
 
+
+
+
+
+
 ## 🔧 Configuration
 
 Set up your `src/main/resources/application.properties` file as below (with your actual credentials):
@@ -29,14 +34,17 @@ spring.datasource.password=<your-db-password>
 spring.jpa.hibernate.ddl-auto=update
 spring.jpa.show-sql=true
 spring.jpa.properties.hibernate.format_sql=true
-spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect 
+```
 
-#Steps
+
+
+##Steps
 git clone https://github.com/tusharmalba/splitapp-backend.git
 cd splitapp-backend
 ./mvnw spring-boot:run
 
-App is deployed at:
+##App is deployed at:
 https://splitapp-backend-production.up.railway.app
 
 | Method | Endpoint                | Description                  |
@@ -49,6 +57,20 @@ https://splitapp-backend-production.up.railway.app
 | GET    | `/expenses/settlements` | Get suggested settlements    |
 | GET    | `/expenses/people`      | Get list of all participants |
 
+
+##📂 Postman Collection
+You can manually test all endpoints in Postman using the deployed URL.
+
+Steps:
+
+Create a new Postman collection.
+
+Add all the endpoints listed above.
+
+Set base URL as:
+https://splitapp-backend-production.up.railway.app
+
+Save and optionally export the collection as .json.
 
 ➕ POST /expenses
 json
@@ -78,7 +100,10 @@ json
   }
 }
 
-👨‍💻 Author
+##👨‍💻 Author
 Tushar Kadam Malba
 GitHub: @tusharmalba
+
+
+
 
